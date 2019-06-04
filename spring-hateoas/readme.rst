@@ -1,0 +1,1 @@
+You can read tutorial https://www.jeejava.com/hateoas-driven-rest-api-using-spring-boot/
