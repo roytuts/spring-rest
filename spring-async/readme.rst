@@ -1,1 +1,1 @@
-You can read tutorial https://www.jeejava.com/spring-asynchronous-execution-using-async/
+You can read tutorial https://www.roytuts.com/spring-asynchronous-execution-using-async/

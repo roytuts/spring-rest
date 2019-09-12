@@ -1,4 +1,4 @@
-package jeejava.rest;
+package roytuts.rest;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -18,8 +18,8 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import jeejava.model.Product;
-import jeejava.sevice.ProductService;
+import roytuts.model.Product;
+import roytuts.sevice.ProductService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class SpringRestControllerTest {

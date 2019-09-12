@@ -1,5 +1,5 @@
 You can read the following tutorials
 
-https://www.jeejava.com/junit-testing-spring-rest-services/
+https://www.roytuts.com/junit-testing-spring-rest-services/
 
-https://www.jeejava.com/spring-restful-webservice-crud-example/
+https://www.roytuts.com/spring-restful-webservice-crud-example/

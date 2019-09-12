@@ -1,1 +1,1 @@
-You can read tutorial https://www.jeejava.com/spring-rest-optional-pathvariable/
+You can read tutorial https://www.roytuts.com/spring-rest-optional-pathvariable/
