@@ -1,0 +1,29 @@
+buildscript {
+	ext {
+		springBootVersion = '2.2.4.RELEASE'
+	}
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+plugins {
+    id 'java-library'
+    id 'org.springframework.boot' version '2.2.4.RELEASE'
+}
+
+sourceCompatibility = 12
+targetCompatibility = 12
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    //implementation('org.springdoc:springdoc-openapi-core:1.1.49')
+    implementation('org.springdoc:springdoc-openapi-ui:1.2.32')
+}
