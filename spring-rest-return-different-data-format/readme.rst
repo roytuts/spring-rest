@@ -1,0 +1,1 @@
+You can read the tutorial https://www.roytuts.com/how-to-return-different-data-formats-json-xml-from-spring-rest-api/

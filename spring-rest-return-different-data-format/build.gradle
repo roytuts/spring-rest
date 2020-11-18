@@ -1,0 +1,36 @@
+buildscript {
+	ext {
+		springBootVersion = '2.3.5.RELEASE'
+	}
+	
+    repositories {
+    	mavenCentral()
+    	jcenter()
+    }
+    
+    dependencies {
+    	classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+plugins {
+    id 'java-library'
+    //id 'org.springframework.boot' version "${springBootVersion}"
+}
+
+sourceCompatibility = 12
+targetCompatibility = 12
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+	
+	//required for JDK 9 or above for XML response
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.11.3'
+    implementation 'javax.xml.bind:jaxb-api:2.4.0-b180830.0359'
+    implementation 'org.glassfish.jaxb:jaxb-runtime:3.0.0-M5'
+}
