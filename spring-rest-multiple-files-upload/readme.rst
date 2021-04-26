@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/how-to-upload-multiple-files-using-spring-rest-api/
+You can read tutorial https://roytuts.com/how-to-upload-multiple-files-using-spring-rest-api/
