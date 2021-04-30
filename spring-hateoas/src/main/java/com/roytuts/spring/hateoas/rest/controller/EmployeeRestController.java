@@ -3,7 +3,7 @@ package com.roytuts.spring.hateoas.rest.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.mvc.ControllerLinkBuilder;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -28,14 +28,14 @@ public class EmployeeRestController {
 		List<EmployeeVo> list = service.getEmployeeList();
 
 		list.forEach(ev -> {
-			ev.add(ControllerLinkBuilder
-					.linkTo(ControllerLinkBuilder.methodOn(EmployeeRestController.class).getEmployeeById(ev.getEmpId()))
+			ev.add(WebMvcLinkBuilder
+					.linkTo(WebMvcLinkBuilder.methodOn(EmployeeRestController.class).getEmployeeById(ev.getEmpId()))
 					.withRel("employee-by-id"));
-			ev.add(ControllerLinkBuilder.linkTo(
-					ControllerLinkBuilder.methodOn(EmployeeRestController.class).getEmployeeByName(ev.getName()))
+			ev.add(WebMvcLinkBuilder
+					.linkTo(WebMvcLinkBuilder.methodOn(EmployeeRestController.class).getEmployeeByName(ev.getName()))
 					.withRel("employee-by-name"));
-			ev.add(ControllerLinkBuilder.linkTo(
-					ControllerLinkBuilder.methodOn(EmployeeRestController.class).getEmployeeByEmail(ev.getEmail()))
+			ev.add(WebMvcLinkBuilder
+					.linkTo(WebMvcLinkBuilder.methodOn(EmployeeRestController.class).getEmployeeByEmail(ev.getEmail()))
 					.withRel("employee-by-email"));
 		});
 
@@ -46,17 +46,15 @@ public class EmployeeRestController {
 	public ResponseEntity<EmployeeVo> getEmployeeById(@PathVariable int id) {
 		EmployeeVo emp = service.getEmployeeById(id);
 
-		emp.add(ControllerLinkBuilder
-				.linkTo(ControllerLinkBuilder.methodOn(EmployeeRestController.class).getEmployeeList())
+		emp.add(WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(EmployeeRestController.class).getEmployeeList())
 				.withRel("employee-list"));
-		emp.add(ControllerLinkBuilder
-				.linkTo(ControllerLinkBuilder.methodOn(EmployeeRestController.class).getEmployeeById(id))
+		emp.add(WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(EmployeeRestController.class).getEmployeeById(id))
 				.withSelfRel());
-		emp.add(ControllerLinkBuilder
-				.linkTo(ControllerLinkBuilder.methodOn(EmployeeRestController.class).getEmployeeByName(emp.getName()))
+		emp.add(WebMvcLinkBuilder
+				.linkTo(WebMvcLinkBuilder.methodOn(EmployeeRestController.class).getEmployeeByName(emp.getName()))
 				.withRel("employee-by-name"));
-		emp.add(ControllerLinkBuilder
-				.linkTo(ControllerLinkBuilder.methodOn(EmployeeRestController.class).getEmployeeByEmail(emp.getEmail()))
+		emp.add(WebMvcLinkBuilder
+				.linkTo(WebMvcLinkBuilder.methodOn(EmployeeRestController.class).getEmployeeByEmail(emp.getEmail()))
 				.withRel("employee-by-email"));
 
 		return new ResponseEntity<EmployeeVo>(emp, HttpStatus.OK);

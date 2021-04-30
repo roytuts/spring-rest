@@ -1,8 +1,8 @@
 package com.roytuts.spring.hateoas.vo;
 
-import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.EntityModel;
 
-public class EmployeeVo extends ResourceSupport {
+public class EmployeeVo extends EntityModel<EmployeeVo> {
 
 	private Integer empId;
 	private String name;
