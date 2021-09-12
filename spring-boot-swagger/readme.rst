@@ -1,0 +1,1 @@
+You can go through the tutorial https://roytuts.com/spring-boot-rest-api-documentation-with-swagger-2/
