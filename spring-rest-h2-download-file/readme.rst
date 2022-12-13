@@ -1,1 +1,1 @@
-You can read tutorial here https://roytuts.com/download-file-using-angular-and-spring-boot/
+Please follow the tutorial https://roytuts.com/download-file-using-angular-and-spring-boot/
