@@ -1,8 +1,9 @@
 package com.roytuts.spring.rest.multiple.files.upload.rest.controller;
 
 import java.io.InputStream;
-import java.util.logging.Logger;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,7 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RestController
 public class MultipleFileUploadRestController {
 
-	private static final Logger logger = Logger.getLogger(MultipleFileUploadRestController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(MultipleFileUploadRestController.class.getName());
 
 	@PostMapping("/upload/multiple/files")
 	public ResponseEntity<String> uploadData(@RequestParam("multipleFiles") MultipartFile[] files) throws Exception {
