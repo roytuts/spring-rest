@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/spring-rest-optional-pathvariable/
+Please follow the tutorial https://roytuts.com/spring-rest-optional-pathvariable/
