@@ -1,1 +1,1 @@
-You can go through the tutorial https://roytuts.com/file-upload-example-using-spring-rest-controller/
+Please follow the tutorial https://roytuts.com/file-upload-example-using-spring-rest-controller/
