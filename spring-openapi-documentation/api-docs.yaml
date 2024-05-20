@@ -10,6 +10,8 @@ paths:
     post:
       tags:
       - rest-api
+      summary: Returns a response as Hello with a name
+      description: This POST operation returns a response as Hello with a given name
       operationId: greet
       requestBody:
         content:
@@ -19,7 +21,13 @@ paths:
         required: true
       responses:
         "200":
-          description: OK
+          description: SUCCESS
+          content:
+            '*/*':
+              schema:
+                type: string
+        "500":
+          description: FAILURE
           content:
             '*/*':
               schema:
@@ -28,10 +36,18 @@ paths:
     get:
       tags:
       - rest-api
+      summary: Returns a response as Hello World!
+      description: This GET operation returns a response as Hello World!
       operationId: greet_1
       responses:
         "200":
-          description: OK
+          description: SUCCESS
+          content:
+            '*/*':
+              schema:
+                type: string
+        "500":
+          description: FAILURE
           content:
             '*/*':
               schema:
